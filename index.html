@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/text.css">
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <title>Elton's Blog</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                    <img src="images/logoElton.png" alt="Logo Elton">
+                </li>
+                <li class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="weeklynerds.html">weekly Nerds</a>
+                    <a href="#S3">Portfolio</a>
+                </li>
+                <li class="hamburger-container">
+                    <div class="light-dark-container">
+                        <label for="light">
+                            <input type="radio" name="theme" id="light" checked hidden>
+                        </label>
+                        <label for="dark">
+                            <input type="radio" name="theme" id="dark" hidden>
+                        </label>
+                        <label for="yellowblack">
+                            <input type="radio" name="theme" id="yellowblack" hidden>
+                        </label>
+                    </div>
+                    <div class="hamburger">
+                        <label for="hamburger">
+                            <input type="checkbox" id="hamburger" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <section class="hero-title">
+          <h1 class="title">
+            <span>W</span><span>e</span><span>b</span><span>d</span><span>e</span><span>s</span><span>i</span><span>g</span><span>n</span>
+            <span> </span>
+            <span>e</span><span>n</span>
+            <span> </span>
+            <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>m</span><span>e</span><span>n</span><span>t</span>
+            <span> </span>
+            <span>M</span><span>i</span><span>n</span><span>o</span><span>r</span>
+        </h1>
+    </section>
+
+    <main class="index-main">
+        <div class="index-container">
+            <section id="S1">
+            <div class="header-images-container">
+                <img src="images/fotogalerij-1.jpeg" alt="">
+                <img src="images/fotogalerij-6.jpeg" alt="">
+                <img src="images/fotogalerij-10.jpeg" alt="">
+            </div>
+            <div class="header-text-content">
+                <h1>Hi! My name is <span class="underline">Elton Irokromo</span></h1>
+                <p>Welcome to my blog! here you will find my adventures in the minor webDesign& Development.</p>
+                <p>I am a creative webdesigner, i love to code in <span class="bold">HTML</span> <span
+                        class="bold">CSS</span> and some javascript.</p>
+                <p> If nothing works out for me ill become an <span class="bold">teacher</span> of HTML CSS one day.</p>
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <h1>My skills</h1>
+            <div class="skills-container">
+                <article class="skill html" data-percent="80">
+                    <p>
+                        <span class="html-span">HTML</span>
+                        <span>90%</span>
+                    </p>
+                    <progress max="100" value="0"></progress>
+                </article>
+
+                <article class="skill css" data-percent="90">
+                    <p>
+                        <span class="css-span">CSS</span>
+                        <span>75%</span>
+                    </p>
+                    <progress max="100" value="0"></progress>
+                </article>
+
+                <article class="skill js" data-percent="50">
+                    <p>
+                        <span class="js-span">JavaScript</span>
+                        <span>60%</span>
+                    </p>
+                    <progress max="100" value="0"></progress>
+                </article>
+                <article class="skill liquid" data-percent="55">
+                    <p>
+                        <span class="liquid-span">liquidJS</span>
+                        <span>60%</span>
+                    </p>
+                    <progress max="100" value="0"></progress>
+                </article>
+            </div>
+
+        </section>
+        <section id="goals">
+            <h1>My goals</h1>
+            <ul>
+                <li>
+                    <label for="goal1">
+                        <input type="checkbox" id="goal1" hidden>
+                        <div class="goal-title">
+                            <img src="images/doelen/webdev.jpeg" alt="">
+                            <h2>Finding a Passion in Web Design and Development</h2>
+                        </div>
+                        <div class="goal-content">
+                            <p>I would like to create a daily routine in which web development—coding in
+                                particular—becomes a consistent part of my day. I do enjoy coding, but I don't yet see a
+                                clear future in it.</p>
+                            <p>During this minor, I hope to discover my path in this field and take the first steps
+                                toward starting my career as a web developer.</p>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label for="goal2">
+                        <input type="checkbox" id="goal2" hidden>
+                        <div class="goal-title">
+                            <img src="images/doelen/css-animation.jpg" alt="">
+                            <h2>Learning how to animate and the use of micro animations</h2>
+                        </div>
+                        <div class="goal-content">
+                            <p>In my opinion, micro animations make a website look more powerful and presentable. They
+                                add a professional touch, and of course — animations are always cool (although not
+                                everyone may agree).</p>
+                            <p>During this minor, I would like to include a lot of animated features in my projects.
+                                This will help me improve my skills in HTML and CSS animations. I also plan to explore
+                                GSAP to expand my animation capabilities.</p>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label for="goal3">
+                        <input type="checkbox" id="goal3" hidden>
+                        <div class="goal-title">
+                            <img src="images/doelen/backenddev.jpg" alt="">
+                            <h2>Writing better code</h2>
+                        </div>
+                        <div class="goal-content">
+                            <p>Writing better code means using the correct HTML tags and applying CSS properly.
+                                JavaScript will be used only when absolutely necessary — if something can’t be done any
+                                other way.</p>
+                            <p>During this minor, I will focus heavily on coding and experiment with many new
+                                techniques. I will keep track of my experiments throughout the process.</p>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </section>
+
+        <section class="projects">
+            <h1>My Projects</h1>
+            <div class="projects-container">
+                <h2>Discover what i made in the minor Webdesign & Development</h2>
+                <p>During the Web Design minor, I completed a total of seven projects. I'm most proud of my CSS to the
+                    Rescue, API project, and of course, my final masterpiece.
+                    Find out why!</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            <div class="project-title">
+                                <h3>Loonsworld</h3>
+                                <p class="csstotherescue">CSSToTheRescue</p>
+                            </div>
+                            <img src="images/projecten/bloons.gif" alt="">
+                        </a>
+
+                    </li>
+                    <li><a href="">
+                            <div class="project-title">
+                                <h3>Guess pokemons</h3>
+                                <p class="api">API</p>
+                            </div><img src="images/projecten/v3-guesspokemon.gif" alt="">
+                        </a>
+                    </li>
+                    <li><a href="">
+                            <div class="project-title">
+                                <h3>Framer Framed</h3>
+                                <p class="meesterproef">Meesterproef</p>
+                            </div><img src="images/projecten/v3-annotation-toevoegen.gif" alt="">
+                        </a>
+                    </li>
+                    <li><a href="">
+                            <div class="project-title">
+                                <h3>WAFS</h3>
+                                <p class="wafs">WAFS</p>
+                            </div><img src="images/projecten/v3-annotation-toevoegen.gif" alt="">
+                        </a>
+                    </li>
+                    <li><a href="">
+                            <div class="project-title">
+                                <h3>Roger</h3>
+                                <p class="hcd">HCD</p>
+                            </div><img src="images/projecten/v3-annotation-toevoegen.gif" alt="">
+                        </a>
+                    </li>
+                    <li><a href="">
+                            <div class="project-title">
+                                <h3>WomaninTech</h3>
+                                <p class="hackaton">Hackaton</p>
+                            </div><img src="images/projecten/v3-annotation-toevoegen.gif" alt="">
+                        </a>
+                    </li>
+                    <li><a href="">
+                            <div class="project-title">
+                                <h3>NS</h3>
+                                <p class="browsertech">BrowserTech</p>
+                            </div><img src="images/projecten/v3-annotation-toevoegen.gif" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+        <section class="weeklynerds">
+            <h1>Weekly Nerds</h1>
+            <div class="weeklynerds-container">
+                <h2>Discover the weekly-nerds. </h2>
+                <p>Usefull and inspirational lectures and experiences of people from the tech world.</p>
+                <ul class="filters">
+                    <li class="filter-group" id="filter-role-group">
+                        <span>Role:</span>
+                        <div class="filter-container">
+                        <label><input type="radio" name="role" value="" checked> All</label>
+                        <label><input type="radio" name="role" value="gt"> Guest Teacher</label>
+                        <label><input type="radio" name="role" value="wn"> Weekly Nerd</label>
+                        </div>
+
+                    </li>
+
+                    <li class="filter-group" id="filter-usefull-group">
+                        <span>Usefulness:</span>
+                        <div class="filter-container">
+                        <label><input type="radio" name="usefull" value="" checked> All</label>
+                        <label><input type="radio" name="usefull" value="mostusefull"> Most useful</label>
+                        <label><input type="radio" name="usefull" value="usefull"> Useful</label>
+                        <label><input type="radio" name="usefull" value="leastusefull"> Least useful</label>
+
+                        </div>
+
+                    </li>
+
+                    <li class="filter-group" id="filter-inspired-group">
+                        <span>Inspiredness:</span>
+                        <div class="filter-container">
+                        <label><input type="radio" name="inspired" value="" checked> All</label>
+                        <label><input type="radio" name="inspired" value="mostinspired"> Most inspired</label>
+                        <label><input type="radio" name="inspired" value="inspired"> Inspired</label>
+                        <label><input type="radio" name="inspired" value="leastinspired"> Least inspired</label>                            
+                        </div>
+
+                    </li>
+                </ul>
+
+                <p id="result-count" style="color: white; font-weight: bold;">Showing 0 items</p>
+
+
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Speaker</th>
+                        <th class="profile">Profile</th>
+                        <th>Role</th>
+                        <th>inspired</th>
+                        <th>usefull</th>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=1"></a></td>
+                        <td>
+                            <h3>Design for Flexibility</h3>
+                        </td>
+                        <td>
+                            <p>10 Maart 2025</p>
+                        </td>
+                        <td>
+                            <p>Nils Binder</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/nils_binder.webp" alt=""></td>
+                        <td>
+                            <div class="role gt"></div>
+                            <p>Guest Teacher</p>
+                        </td>
+
+                        <td>
+                            <p class="insp mostinspired">Most inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl mostusefull">Most usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=2"></a></td>
+                        <td>
+                            <h3>GSAP</h3>
+                        </td>
+                        <td>
+                            <p>07 Maart 2025</p>
+                        </td>
+                        <td>
+                            <p>Cassie Evans</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/cassie_evans.webp" alt=""></td>
+                        <td>
+                            <div class="role gt"></div>
+                            <p>Guest Teacher</p>
+                        </td>
+
+                        <td>
+                            <p class="insp mostinspired">Most inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl mostusefull">Most usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=3"></a></td>
+                        <td>
+                            <h3>Accessibility & Semantiek</h3>
+                        </td>
+                        <td>
+                            <p>28 Maart 2025</p>
+                        </td>
+                        <td>
+                            <p>Erik Kroes</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/erik_kroes.webp" alt=""></td>
+                        <td>
+                            <div class="role gt"></div>
+                            <p>Guest Teacher</p>
+                        </td>
+
+                        <td>
+                            <p class="insp mostinspired">Most inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl mostusefull">Most usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=4"></a></td>
+                        <td>
+                            <h3>Declarative Design</h3>
+                        </td>
+                        <td>
+                            <p>12 Maart 2025</p>
+                        </td>
+                        <td>
+                            <p>Jeremy Keith</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/jeremy_keith.webp" alt=""></td>
+                        <td>
+                            <div class="role gt"></div>
+                            <p>Guest Teacher</p>
+                        </td>
+
+                        <td>
+                            <p class="insp mostinspired">Most inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl mostusefull">Most usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=5"></a></td>
+                        <td>
+                            <h3>CSS Character Animations</h3>
+                        </td>
+                        <td>
+                            <p>17 Maart 2025</p>
+                        </td>
+                        <td>
+                            <p>Julia Miocene</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/julia_miocene.webp" alt=""></td>
+                        <td>
+                            <div class="role wn"></div>
+                            <p>Weekly Nerd</p>
+                        </td>
+
+                        <td>
+                            <p class="insp inspired">Inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl usefull">Usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=6"></a></td>
+                        <td>
+                            <h3>"Rule of Least Power"</h3>
+                        </td>
+                        <td>
+                            <p>05 Februari 2025</p>
+                        </td>
+                        <td>
+                            <p>Killian Valkhof</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/kilian_valkhof.webp" alt=""></td>
+                        <td>
+                            <div class="role wn"></div>
+                            <p>Weekly Nerd</p>
+                        </td>
+
+                        <td>
+                            <p class="insp leastinspired">Least inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl leastusefull">Least usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=7"></a></td>
+                        <td>
+                            <h3>Receipt Printers 101</h3>
+                        </td>
+                        <td>
+                            <p>24 Maart 2025</p>
+                        </td>
+                        <td>
+                            <p>Niels Leenheer</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/niels_leenheer.webp" alt=""></td>
+                        <td>
+                            <div class="role wn"></div>
+                            <p>Weekly Nerd</p>
+                        </td>
+
+                        <td>
+                            <p class="insp mostinspired">Most inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl mostusefull">Most usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=8"></a></td>
+                        <td>
+                            <h3>Thinking Outside of the Accessibility Box</h3>
+                        </td>
+                        <td>
+                            <p>28 Maart 2025</p>
+                        </td>
+                        <td>
+                            <p>Nienke de Keijzer</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/nienke_de_keijzer.webp" alt=""></td>
+                        <td>
+                            <div class="role wn"></div>
+                            <p>Weekly Nerd</p>
+                        </td>
+
+                        <td>
+                            <p class="insp mostinspired">Most inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl mostusefull">Most usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=9"></a></td>
+                        <td>
+                            <h3>Web Monetization en Betalen voor het Web</h3>
+                        </td>
+                        <td>
+                            <p>26 Februari 2025</p>
+                        </td>
+                        <td>
+                            <p>Peter-Paul Koch</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/peter_paul_koch.webp" alt=""></td>
+                        <td>
+                            <div class="role wn"></div>
+                            <p>Weekly Nerd</p>
+                        </td>
+
+                        <td>
+                            <p class="insp mostinspired">Most inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl mostusefull">Most usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=10"></a></td>
+                        <td>
+                            <h3>Hackers United / E-waste Enthousiast</h3>
+                        </td>
+                        <td>
+                            <p>03 April 2025</p>
+                        </td>
+                        <td>
+                            <p>Rosa Schuurmans</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/roel_nieskens.webp" alt=""></td>
+                        <td>
+                            <div class="role wn"></div>
+                            <p>Weekly Nerd</p>
+                        </td>
+
+                        <td>
+                            <p class="insp mostinspired">Most inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl mostusefull">Most usefull</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="weeklynerds.html?keuze=11"></a></td>
+                        <td>
+                            <h3>Typography & Web Fonts</h3>
+                        </td>
+                        <td>
+                            <p>03 Maart 2025</p>
+                        </td>
+                        <td>
+                            <p>Roel Nieskens</p>
+                        </td>
+                        <td><img src="images/weeklyNerds/roel_nieskens.webp" alt=""></td>
+                        <td>
+                            <div class="role gt"></div>
+                            <p>Guest Teacher</p>
+                        </td>
+
+                        <td>
+                            <p class="insp mostinspired">Most inspired</p>
+                        </td>
+                        <td>
+                            <p class="usfl mostusefull">Most usefull</p>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>Developed by: Elton Irokromo</p>
+            <p>Front end Developer</p>
+        </div>
+    </footer>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

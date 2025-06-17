@@ -1,0 +1,85 @@
+    .hero-title{
+        height: 18rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title{
+        font-size: 5dvw;
+        text-align: center;
+    }
+
+    .title span {
+      display: inline-block;
+      animation:
+        wave 1.2s infinite ease-in-out calc(var(--title-index) * 0.2s),
+        rainbow 1.2s infinite ease-in-out calc(var(--title-index) * 0.2s),
+        glitch 1.2s infinite ease-in-out calc(var(--title-index) * 0.2s);
+    }
+
+    .title span:nth-child(1) { --title-index: 1; }
+    .title span:nth-child(2) { --title-index: 2; }
+    .title span:nth-child(3) { --title-index: 3; }
+    .title span:nth-child(4) { --title-index: 4; }
+    .title span:nth-child(5) { --title-index: 5; }
+    .title span:nth-child(6) { --title-index: 6; }
+    .title span:nth-child(7) { --title-index: 7; }
+    .title span:nth-child(8) { --title-index: 8; }
+    .title span:nth-child(9) { --title-index: 9; }
+    .title span:nth-child(10) { --title-index: 10; }
+    .title span:nth-child(11) { --title-index: 11; }
+    .title span:nth-child(12) { --title-index: 12; }
+    .title span:nth-child(13) { --title-index: 13; }
+    .title span:nth-child(14) { --title-index: 14; }
+    .title span:nth-child(15) { --title-index: 15; }
+    .title span:nth-child(16) { --title-index: 16; }
+    .title span:nth-child(17) { --title-index: 17; }
+    .title span:nth-child(18) { --title-index: 18; }
+    .title span:nth-child(19) { --title-index: 19; }
+    .title span:nth-child(20) { --title-index: 20; }
+    .title span:nth-child(21) { --title-index: 21; }
+    .title span:nth-child(22) { --title-index: 22; }
+    .title span:nth-child(23) { --title-index: 23; }
+    .title span:nth-child(24) { --title-index: 24; }
+    .title span:nth-child(25) { --title-index: 25; }
+    .title span:nth-child(26) { --title-index: 26; }
+    .title span:nth-child(27) { --title-index: 27; }
+    .title span:nth-child(28) { --title-index: 28; }
+    .title span:nth-child(29) { --title-index: 29; }
+    .title span:nth-child(30) { --title-index: 30; }
+
+
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes rainbow {
+      0%, 100% { color: #ff2d55; }
+      25% { color: #ffcc00; }
+      50% { color: #4cd964; }
+      75% { color: #007aff; }
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+      25% {
+        text-shadow: -2px 0 red, 2px 0 blue;
+      }
+      50% {
+        text-shadow: 2px 0 blue, -2px 0 red;
+      }
+      75% {
+        text-shadow: -2px 0 blue, 2px 0 red;
+      }
+      100% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+    }
