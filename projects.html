@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/text.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                    <img src="images/logoElton.png" alt="Logo Elton">
+                </li>
+                <li class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="weeklynerds.html">weekly Nerds</a>
+                    <a href="#S3">Portfolio</a>
+                </li>
+                <li class="hamburger-container">
+                    <div class="light-dark-container">
+                        <label for="light">
+                            <input type="radio" name="theme" id="light" checked hidden>
+                        </label>
+                        <label for="dark">
+                            <input type="radio" name="theme" id="dark" hidden>
+                        </label>
+                        <label for="yellowblack">
+                            <input type="radio" name="theme" id="yellowblack" hidden>
+                        </label>
+                    </div>
+                    <div class="hamburger">
+                        <label for="hamburger">
+                            <input type="checkbox" id="hamburger" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-nav">
+        <ul>
+            <li><label for="pj1"><input type="radio" id="pj1" name="pj" >Loonsworld</label></li>
+            <li><label for="pj2"><input type="radio" id="pj2" name="pj">WAFS</label></li>
+            <li><label for="pj3"><input type="radio" id="pj3" name="pj" checked>Pokemon</label></li>
+            <li><label for="pj4"><input type="radio" id="pj4" name="pj">Roger</label></li>
+            <li><label for="pj5"><input type="radio" id="pj5" name="pj">NS</label></li>
+            <li><label for="pj6"><input type="radio" id="pj6" name="pj">Woman in Tech</label></li>
+            <li><label for="pj7"><input type="radio" id="pj7" name="pj">Framer Framed</label></li>
+        </ul>
+    </section>
+
+    <main>
+        <div class="projects-wrapper">
+            <section class="projects-header">
+                <img class="projects-img loonsworld-img" src="images/projecten/loonsworld/loonsworld.gif" alt="bloons project">
+                <h1 class="title loonsworld-title">
+                <span>L</span><span>o</span><span>o</span><span>n</span><span>s</span><span>w</span><span>o</span><span>r</span><span>l</span><span>d</span>
+                </h1>
+
+
+                <img class="projects-img pokemon-img" src="images/projecten/pokemon/pokemon-intro.gif" alt="pokemon project">
+                <h1 class="title pokemon-title">
+                <span>P</span><span>o</span><span>k</span><span>e</span><span>m</span><span>o</span><span>n</span>
+                <span> </span>
+                <span>G</span><span>u</span><span>e</span><span>s</span><span>s</span><span>e</span><span>r</span>
+                </h1>
+            </section>
+            <article class="loonsword">
+            <h2>A project made with CSS only. <span>NO Javascript.</span></h2>
+
+            <section class="loonsworld-intro">
+                <h3>Starting with my journey</h3>
+                <p>At the beginning of my journey to Loonsworld, I had wild ideas, but I wasn’t sure if I would ever get there. The first two weeks were quite calm and chill, and I didn’t yet realize how short the time actually was. I took my time with the balloon and did a lot of experimenting until it finally worked.</p>
+                <p>From that point on, things got easier, but I only had one week left. With good naps and some all-nighters, I eventually reached the final result I had been aiming for. Still, it feels like I could’ve gotten even more out of it — and that’s probably true.</p>
+                <p>Nevertheless, I’m really proud of myself.</p>
+            </section>
+
+            <div class="loonsworld-content-container">
+                <section class="loonsworld-usage">
+                    <h3>What did I use in my code?</h3>
+                    <ul>
+                        <li><p><span class="highlight">display</span>: <span class="highlight">flex</span> / <span class="highlight">grid</span></p></li>
+                        <li><p><span class="highlight">position</span>: <span class="highlight">relative</span> / <span class="highlight">absolute</span> – <span class="highlight">left</span> / <span class="highlight">top</span> / <span class="highlight">right</span> / <span class="highlight">bottom</span></p></li>
+                        <li><p><span class="highlight">::before</span> / <span class="highlight">::after</span> – <span class="highlight">content:''</span></p></li>
+                        <li><p><span class="highlight">:has</span>, <span class="highlight">:checked</span>, <span class="highlight">:not</span>, <span class="highlight">:hover</span></p></li>
+                        <li><p><span class="highlight">Custom Properties</span></p></li>
+                        <li><p><span class="highlight">CSS nesting</span></p></li>
+                        <li><p><span class="highlight">calc()</span></p></li>
+                        <li><p><span class="highlight">box-shadow</span> / <span class="highlight">inset</span></p></li>
+                        <li><p><span class="highlight">Gradients</span> – <span class="highlight">linear</span> / <span class="highlight">radial</span></p></li>
+                        <li><p><span class="highlight">transform</span>: <span class="highlight">translate</span> / <span class="highlight">scale</span> / <span class="highlight">rotate</span></p></li>
+                        <li><p><span class="highlight">@keyframes</span></p></li>
+                        <li><p><span class="highlight">--index</span></p></li>
+                        <li><p><span class="highlight">mask</span></p></li>
+                        <li><p><span class="highlight">@container</span></p></li>
+                    </ul>
+                </section>
+
+                <section class="loonsworld-achieved">
+                    <h3>What have i achieved?</h3>
+                    <ul>
+                        <li><p>A better understanding of code</p></li>
+                        <li><p>Confidence that I can code</p></li>
+                        <li><p>Knowledge of a part of CSS</p></li>
+                        <li><p>Coding is actually fun</p></li>
+                    </ul>
+                </section>
+
+                <section class="loonsworld-sources">
+                    <h3>Source list</h3>
+                    <ul>
+                        <li><a href="https://www.pyxofy.com/css-art-hot-air-balloon/">hot air balloon made with CSS</a></li>
+                        <li><a href="https://codepen.io/CoryMaklin/pen/wXRRye">rising sun</a></li>
+                        <li><a href="https://codepen.io/billyysea/pen/nLroLY?editors=1100">sky gradients</a></li>
+                        <li><a href="https://codepen.io/agathaco/pen/rpZoYd?editors=0100">trees</a></li>
+                        <li><a href="https://codepen.io/jonslater204/pen/LYWQbMa">space invaders</a></li>
+                        <li><a href="https://codepen.io/nelledejones/pen/gOOPWrK?editors=0100">cool animations</a></li>
+                        <li><a href="https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp">hide scrollbar</a></li>
+                        <li><a href="https://developer.chrome.com/docs/css-ui/css-linear-easing-function?hl=nl">bounce animation</a></li>
+                        <li><a href="https://matthewlein.com/tools/ceaser">fly animation</a></li>
+                        <li><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_shake">shake animation</a></li>
+                        <li><a href="https://prismic.io/blog/css-text-animations">text animations</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <section class="loonsworld-links">
+                <a class="link-button" href="https://reddragg.github.io/CSSToTheRescue/">Visit website</a>
+                <a class="link-button" href="https://github.com/RedDragg/CSSToTheRescue.git">Visit Github</a> 
+            </section>
+
+            <section class="loonsworld-preview">
+                <h3>Preview</h3>
+                <ul>
+                    <li><p>Start</p><img src="images/projecten/loonsworld/start.gif" alt=""></li>
+                    <li><p>Up and down</p><img src="images/projecten/loonsworld/op-en-neer.gif" alt="loonsworld op en neer buttons"></li>
+                    <li><p>Day and night cycle</p><img src="images/projecten/loonsworld/daynight-css.gif" alt=""></li>
+                    <li><p>Mountain</p><img src="images/projecten/loonsworld/mntn-redo-panel.gif" alt=""></li>
+                </ul>
+            </section>
+
+
+            </article>
+            <article class="pokemon">
+                <h2>A pokemon guessing game made with liquid.js</h2>
+                <section class="pokemon-intro">
+                    <h3>My journey</h3>
+                    <p>During this project, I built an interactive Pokémon web app over the course of four weeks. What started as a simple Pokédex evolved into a full game experience including a "Guess the Pokémon" feature, a team builder, Pokédex, and a collection system based on user interaction.</p>
+                </section>
+                <section class="pokemon-features">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Interactive Pokédex with detailed Pokémon info.</li>
+                        <li>Team Builder – Add and remove Pokémon from your team.</li>
+                        <li>Animated Pokémon sprites from the PokéAPI.</li>
+                        <li>Filtering by Pokémon name and type.</li>
+                        <li>Hover effect on Pokéball (opening animation).</li>
+                        <li>Reset button to clear your team.</li>
+                        <li>"Guess the Pokémon" game using brightness filter and localStorage tracking.</li>
+                        <li>Pokémon List that tracks caught Pokémon visually.</li>
+                        <li>Detailed Pokédex showing only captured Pokémon.</li>
+                        <li>Intro sequence mimicking Pokémon Fire Red (with skip option).</li>
+                        <li>User system with generation and gender selection.</li>
+                        <li>Progress tracking: correct answers, mistakes, streaks, best streak.</li>
+                        <li>Paginated Pokédex and Pokémon List for easier navigation.</li>
+                        <li>Filtering for only caught Pokémon.</li>
+                        <li>Developer tools including "Guess All" cheat button for testing.</li>
+                        <li>Personalized winner screen with a summary card.</li>
+                    </ul>
+                </section>
+                <section>
+                    
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>Developed by: Elton Irokromo</p>
+            <p>Front end Developer</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

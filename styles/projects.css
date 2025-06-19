@@ -1,0 +1,144 @@
+.projects-wrapper > article, .projects-img, .title{
+    display: none;
+}
+
+.projects-nav{
+    margin-top: 1rem;
+}
+
+body:has(#pj1:checked){
+    .loonsword{
+        display: flex;
+    }
+    .loonsworld-img, .loonsworld-title{
+        display: block;
+    }
+}
+
+body:has(#pj3:checked) {
+    .pokemon{
+        display: flex;
+    }
+    .pokemon-img, .pokemon-title{
+        display: block;
+    }
+}
+.projects-header{
+    img{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+}
+
+.projects-wrapper{
+    width: clamp(1rem, 100%, 80rem);
+    justify-self: center;
+}
+
+/******************************************
+ *              loonsworld           *
+ ******************************************/
+
+
+.loonsword{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+
+    section:not(.loonsworld-links){
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+    }
+
+    .loonsworld-content-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .loonsworld-preview{
+        
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            border: solid 1px black;
+        }
+
+
+    }
+
+    section:not(.loonsworld-preview) ul{
+        list-style:disc;
+        padding: 0 1rem;
+        color: var(--color);        
+    }
+}
+
+
+.loonsworld-links{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.link-button{
+    padding: .5rem;
+    text-decoration: none;
+    cursor: pointer;
+    background: var(--button-bg);
+    border-radius: 5px;
+    color: var(--color);
+    transition: .5s ease;
+
+
+    &:hover{
+        transform: translate(3px, -3px);
+        transition: .5s ease;
+    }
+}
+
+@media (min-width:900px){
+    .projects-header{
+        h1{
+            text-align: left;
+            font-size: 5rem;
+        }
+        img{
+            object-fit: cover;
+            height: 25rem;
+            object-position: top;
+            border-radius: 8px;
+        }
+
+        
+    }
+}
+
+
+/******************************************
+ *              pokemon           *
+ ******************************************/
+
+.pokemon{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}

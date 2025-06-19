@@ -6,8 +6,9 @@
     }
 
     .title{
-        font-size: 5dvw;
+        font-size: 3.3rem;
         text-align: center;
+        padding: 1rem;
     }
 
     .title span {
