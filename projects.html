@@ -60,11 +60,11 @@
 
     <section class="projects-nav">
         <ul>
-            <li><label for="pj1"><input type="radio" id="pj1" name="pj" >Loonsworld</label></li>
+            <li><label for="pj1"><input type="radio" id="pj1" name="pj">Loonsworld</label></li>
             <li><label for="pj2"><input type="radio" id="pj2" name="pj">WAFS</label></li>
-            <li><label for="pj3"><input type="radio" id="pj3" name="pj" checked>Pokemon</label></li>
+            <li><label for="pj3"><input type="radio" id="pj3" name="pj">Pokemon</label></li>
             <li><label for="pj4"><input type="radio" id="pj4" name="pj">Roger</label></li>
-            <li><label for="pj5"><input type="radio" id="pj5" name="pj">NS</label></li>
+            <li><label for="pj5"><input type="radio" id="pj5" name="pj" checked>NS</label></li>
             <li><label for="pj6"><input type="radio" id="pj6" name="pj">Woman in Tech</label></li>
             <li><label for="pj7"><input type="radio" id="pj7" name="pj">Framer Framed</label></li>
         </ul>
@@ -89,14 +89,14 @@
             <article class="loonsword">
             <h2>A project made with CSS only. <span>NO Javascript.</span></h2>
 
-            <section class="loonsworld-intro">
+            <section class="intro">
                 <h3>Starting with my journey</h3>
                 <p>At the beginning of my journey to Loonsworld, I had wild ideas, but I wasn’t sure if I would ever get there. The first two weeks were quite calm and chill, and I didn’t yet realize how short the time actually was. I took my time with the balloon and did a lot of experimenting until it finally worked.</p>
                 <p>From that point on, things got easier, but I only had one week left. With good naps and some all-nighters, I eventually reached the final result I had been aiming for. Still, it feels like I could’ve gotten even more out of it — and that’s probably true.</p>
                 <p>Nevertheless, I’m really proud of myself.</p>
             </section>
 
-            <div class="loonsworld-content-container">
+            <div class="content-container">
                 <section class="loonsworld-usage">
                     <h3>What did I use in my code?</h3>
                     <ul>
@@ -145,12 +145,12 @@
                 </section>
             </div>
 
-            <section class="loonsworld-links">
+            <section class="links">
                 <a class="link-button" href="https://reddragg.github.io/CSSToTheRescue/">Visit website</a>
                 <a class="link-button" href="https://github.com/RedDragg/CSSToTheRescue.git">Visit Github</a> 
             </section>
 
-            <section class="loonsworld-preview">
+            <section class="preview">
                 <h3>Preview</h3>
                 <ul>
                     <li><p>Start</p><img src="images/projecten/loonsworld/start.gif" alt=""></li>
@@ -168,30 +168,179 @@
                     <h3>My journey</h3>
                     <p>During this project, I built an interactive Pokémon web app over the course of four weeks. What started as a simple Pokédex evolved into a full game experience including a "Guess the Pokémon" feature, a team builder, Pokédex, and a collection system based on user interaction.</p>
                 </section>
-                <section class="pokemon-features">
-                    <h3>Features</h3>
+                <div class="content-container">
+                    <section class="pokemon-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Interactive Pokédex with detailed Pokémon info.</li>
+                            <li>Animated Pokémon sprites from the PokéAPI.</li>
+                            <li>Filtering by Pokémon name and type.</li>
+                            <li>Hover effect on Pokéball (opening animation).</li>
+                            <li>Reset button to clear your team.</li>
+                            <li>"Guess the Pokémon" game using brightness filter and localStorage tracking.</li>
+                            <li>Pokémon List that tracks caught Pokémon visually.</li>
+                            <li>Detailed Pokédex showing only captured Pokémon.</li>
+                            <li>Intro sequence mimicking Pokémon Fire Red (with skip option).</li>
+                            <li>User system with generation and gender selection.</li>
+                            <li>Progress tracking: correct answers, mistakes, streaks, best streak.</li>
+                            <li>Paginated Pokédex and Pokémon List for easier navigation.</li>
+                            <li>Filtering for only caught Pokémon.</li>
+                            <li>Developer tools including "Guess All" cheat button for testing.</li>
+                            <li>Personalized winner screen with a summary card.</li>
+                        </ul>
+                    </section>
+                    <section class="pokemon-achieved">
+                        <h3>What have i achieved?</h3>
+                        <ul>
+                            <li>Working with APIs</li>
+                            <li>Using localStorage</li>
+                            <li>Data fetching</li>
+                            <li>Working with json format</li>
+                            <li>A better understanding in working together with ChatGPT</li>
+                        </ul>
+                    </section>    
+                </div>
+                    <section class="links">
+                        <a class="link-button" href="https://reddragg.github.io/CSSToTheRescue/">Visit website</a>
+                        <a class="link-button" href="https://github.com/RedDragg/CSSToTheRescue.git">Visit Github</a> 
+                    </section>
+
+                    <section class="preview">
+                        <h3>Preview</h3>
+                        <ul>
+                            <li><p>PokeGuesser</p><img src="images/projecten/pokemon/pokemon-guess.gif" alt=""></li>
+                            <li><p>Pokedex</p><img src="images/projecten/pokemon/v3-pokedex.gif" alt="loonsworld op en neer buttons"></li>
+                            <li><p>Pokemonlist</p><img src="images/projecten/pokemon/v3-pokemon-guessedall.gif" alt=""></li>
+                            <li><p>Streak count</p><img src="images/projecten/pokemon/v3-pokemon-streak.gif" alt=""></li>
+                            <li><p>Username</p><img src="images/projecten/pokemon/v3-pokemon-username.gif" alt=""></li>
+                            <li><p>Winners screen</p><img src="images/projecten/pokemon/v3-winnercontainer.gif" alt=""></li>
+                        </ul>
+                    </section>
+            </article>
+
+            <article class="roger">
+                <h2>A custom made screenreader unique to Roger's preferences</h2>
+                <section class="roger-intro">
+                    <h3>My journey with Roger</h3>
+                    <p>Throughout this project, I developed a screen reader application tailored specifically to Roger, a visually impaired user with a hereditary eye condition. Close collaboration with Roger highlighted the importance of accessibility and energy management in designing digital reading aids. Key features such as annotation retrieval, customizable fonts and colors, and speech functionalities proved essential for an optimal reading experience.</p>
+                </section>
+                <section class="roger-about">
+                    <h3>Who is Roger actually?</h3>
+                    <p>Roger is a 58-year-old man who began losing his sight at the age of 43 due to a hereditary eye condition that causes progressive central vision loss. Despite his visual impairment, Roger is very active and creative—he is involved in philosophy studies, serves as a board member at a local organization, and enjoys sculpting. </p>
+                    <p>He has adapted to his limited vision by using screen readers, braille, and audio materials, but struggles with efficiently finding and managing annotations in digital texts. Roger values tools that help him read more easily without excessive energy expenditure and prefers customizable options such as dark mode, adjustable fonts, and speech features to support his reading experience.</p>
+                </section>
+                <div class="content-container">
+                    <section class="roger-feature">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Adjustable font type</li>
+                            <li>Adjustable font size</li>
+                            <li>Adjustable line height</li>
+                            <li>Adjustable font thickness</li>
+                            <li>Light/dark mode (preference for dark mode with yellow-on-black contrast)</li>
+                            <li>Focus highlights for easy tracking</li>
+                            <li>Add annotations linked to specific words or sentences</li>
+                            <li>Edit existing annotations</li>
+                            <li>Delete annotations</li>
+                            <li>Keyboard navigation through annotations</li>
+                            <li>Speech-to-text input for annotations</li>
+                            <li>Screenreader reads annotations aloud</li>
+                            <li>Select words for annotation using arrow keys</li>
+                            <li>Reads text out loud</li>
+                            <li>Reads commands out loud</li>
+                            <li>Reads annotations out loud</li>
+                            <li>Highlights words as they are read</li>
+                            <li>Customizable keyboard shortcuts</li>
+                            <li>Settings menu for personalizing the experience</li>
+                            <li>Fully operable via keyboard only</li>
+                            <li>WCAG compliant contrast settings</li>
+                            <li>Adjustable mouse pointer size</li>
+                            <li>Overview of headings for quick navigation</li>
+                            <li>Import books via Word files (planned)</li>
+                            <li>Search function for annotations (planned)</li>
+                            <li>Search function for heading structure (planned)</li>
+                            <li>Voice commands for navigation and search (planned)</li>
+                        </ul>
+                    </section>
+
+                    <section class="roger-achieved">
+                        <h3>What have i achieved?</h3>
+                        <ul>
+                            <li>Developed an accessible screen reader.</li>
+                            <li>Implemented customizable reading settings.</li>
+                            <li>Created an efficient annotation system.</li>
+                            <li>Enhanced navigation through intuitive hotkeys.</li>
+                            <li>Iteratively improved the application based on Roger’s direct feedback.</li>
+                        </ul>
+                    </section>
+                </div>
+                <section class="links">
+                        <a class="link-button" href="https://reddragg.github.io/CSSToTheRescue/">Visit website</a>
+                        <a class="link-button" href="https://github.com/RedDragg/CSSToTheRescue.git">Visit Github</a> 
+                    </section>
+
+                    <section class="preview">
+                        <h3>Preview</h3>
+                        <ul>
+                            <li><p>PokeGuesser</p><img src="images/projecten/pokemon/pokemon-guess.gif" alt=""></li>
+                            <li><p>Pokedex</p><img src="images/projecten/pokemon/v3-pokedex.gif" alt="loonsworld op en neer buttons"></li>
+                            <li><p>Pokemonlist</p><img src="images/projecten/pokemon/v3-pokemon-guessedall.gif" alt=""></li>
+                            <li><p>Streak count</p><img src="images/projecten/pokemon/v3-pokemon-streak.gif" alt=""></li>
+                            <li><p>Username</p><img src="images/projecten/pokemon/v3-pokemon-username.gif" alt=""></li>
+                            <li><p>Winners screen</p><img src="images/projecten/pokemon/v3-winnercontainer.gif" alt=""></li>
+                        </ul>
+                    </section>
+            </article>
+
+            <article class="ns">
+                <h2>NS belastingsforumilier</h2>
+                <section class="ns-intro">
+                    <h3>My journey</h3>
+                    <p>Over the course of this project, I built a form interface that follows the NS style and focused on making it both accessible and user-friendly. I started with light/dark mode and basic HTML structure, then moved on to styling using things like :has selectors. Halfway through, I changed my approach to better match the NS design by rebuilding components like buttons and inputs one by one. In the final phase, I added some JavaScript so users can save, load, and delete their input. I worked step by step, improving things as I went based on feedback and what I learned along the way.</p>
+                </section>
+                <div class="content-container">
+                    <section class="ns-features">
+                        <h3>Features of this project</h3>
+                        <ul>
+                            <li>Light and dark mode toggle for better accessibility</li>
+                            <li>NS-styled components (buttons, inputs, etc.) based on official brand guidelines</li>
+                            <li>Clean HTML form structure using &lt;fieldset&gt; for semantic grouping</li>
+                            <li>Styled interactive elements using modern CSS selectors like :has()</li>
+                            <li>Input field feedback (hover, target, popover) for better user experience</li>
+                            <li>JavaScript buttons to save, load, and delete form data</li>
+                            <li>Modular and reusable styling approach for consistency and scalability</li>
+                            <li>Progressive enhancement: started with HTML/CSS, then added JavaScript</li>
+                        </ul>
+                    </section>
+
+                    <section class="ns-achieved">
+                        <h3>What have i achieved?</h3>
+                        <ul>
+                            <li>I worked a lot with :has selectors</li>
+                            <li>How to make a form</li>
+                            <li>Worked with different types of inputs</li>
+                            <li>Using the .gitignore</li>
+                            <li>NS styling knowledge</li>
+                        </ul>
+                    </section>
+                </div>
+                <section class="links">
+                    <a class="link-button" href="https://reddragg.github.io/CSSToTheRescue/">Visit website</a>
+                    <a class="link-button" href="https://github.com/RedDragg/CSSToTheRescue.git">Visit Github</a> 
+                </section>
+
+                <section class="preview">
+                    <h3>Preview</h3>
                     <ul>
-                        <li>Interactive Pokédex with detailed Pokémon info.</li>
-                        <li>Team Builder – Add and remove Pokémon from your team.</li>
-                        <li>Animated Pokémon sprites from the PokéAPI.</li>
-                        <li>Filtering by Pokémon name and type.</li>
-                        <li>Hover effect on Pokéball (opening animation).</li>
-                        <li>Reset button to clear your team.</li>
-                        <li>"Guess the Pokémon" game using brightness filter and localStorage tracking.</li>
-                        <li>Pokémon List that tracks caught Pokémon visually.</li>
-                        <li>Detailed Pokédex showing only captured Pokémon.</li>
-                        <li>Intro sequence mimicking Pokémon Fire Red (with skip option).</li>
-                        <li>User system with generation and gender selection.</li>
-                        <li>Progress tracking: correct answers, mistakes, streaks, best streak.</li>
-                        <li>Paginated Pokédex and Pokémon List for easier navigation.</li>
-                        <li>Filtering for only caught Pokémon.</li>
-                        <li>Developer tools including "Guess All" cheat button for testing.</li>
-                        <li>Personalized winner screen with a summary card.</li>
+                        <li><p>PokeGuesser</p><img src="images/projecten/pokemon/pokemon-guess.gif" alt=""></li>
+                        <li><p>Pokedex</p><img src="images/projecten/pokemon/v3-pokedex.gif" alt="loonsworld op en neer buttons"></li>
+                        <li><p>Pokemonlist</p><img src="images/projecten/pokemon/v3-pokemon-guessedall.gif" alt=""></li>
+                        <li><p>Streak count</p><img src="images/projecten/pokemon/v3-pokemon-streak.gif" alt=""></li>
+                        <li><p>Username</p><img src="images/projecten/pokemon/v3-pokemon-username.gif" alt=""></li>
+                        <li><p>Winners screen</p><img src="images/projecten/pokemon/v3-winnercontainer.gif" alt=""></li>
                     </ul>
                 </section>
-                <section>
-                    
-                </section>
+
             </article>
         </div>
     </main>

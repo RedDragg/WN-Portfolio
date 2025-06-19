@@ -23,6 +23,26 @@ body:has(#pj3:checked) {
         display: block;
     }
 }
+
+body:has(#pj4:checked) {
+    .roger{
+        display: flex;
+    }
+    .pokemon-img, .pokemon-title{
+        display: block;
+    }
+}
+
+body:has(#pj5:checked) {
+    .ns{
+        display: flex;
+    }
+    .pokemon-img, .pokemon-title{
+        display: block;
+    }
+}
+
+
 .projects-header{
     img{
         width: 100%;
@@ -42,21 +62,19 @@ body:has(#pj3:checked) {
  *              loonsworld           *
  ******************************************/
 
-
-.loonsword{
-    display: flex;
+.projects-wrapper > article{
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
 
-    section:not(.loonsworld-links){
+    section:not(.links){
         display: flex;
         flex-direction: column;
         gap: .5rem;
 
     }
 
-    .loonsworld-content-container{
+    .content-container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -64,7 +82,7 @@ body:has(#pj3:checked) {
         gap: 2rem;
     }
 
-    .loonsworld-preview{
+    .preview{
         
         ul{
             display: flex;
@@ -84,7 +102,7 @@ body:has(#pj3:checked) {
 
     }
 
-    section:not(.loonsworld-preview) ul{
+    section:not(.preview) ul{
         list-style:disc;
         padding: 0 1rem;
         color: var(--color);        
@@ -92,7 +110,7 @@ body:has(#pj3:checked) {
 }
 
 
-.loonsworld-links{
+.links{
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -131,14 +149,18 @@ body:has(#pj3:checked) {
     }
 }
 
+@media (min-width:1200px){
+    .pokemon{
+        .preview{
+            ul{
+                display: grid!important;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+}
+
 
 /******************************************
  *              pokemon           *
  ******************************************/
-
-.pokemon{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
-}
