@@ -201,7 +201,7 @@ body:has(.projects) main{
     }
 
     label:has(input:checked) img{
-        border: solid 2px red;
+        border: solid 2px gray;
     }
 }
 
