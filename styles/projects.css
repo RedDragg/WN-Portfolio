@@ -28,7 +28,7 @@ body:has(#pj4:checked) {
     .roger{
         display: flex;
     }
-    .pokemon-img, .pokemon-title{
+    .roger-img, .roger-title{
         display: block;
     }
 }
@@ -37,9 +37,31 @@ body:has(#pj5:checked) {
     .ns{
         display: flex;
     }
-    .pokemon-img, .pokemon-title{
+    .ns-img, .ns-title{
         display: block;
     }
+}
+
+body:has(#pj6:checked) {
+    .hackaton{
+        display: flex;
+    }
+    .hackaton-img, .hackaton-title{
+        display: block;
+    }
+}
+
+body:has(#pj7:checked) {
+    .ff{
+        display: flex;
+    }
+    .ff-img, .ff-title{
+        display: block;
+    }
+}
+
+body:has(.projects) main{
+    position: relative;
 }
 
 
@@ -53,14 +75,56 @@ body:has(#pj5:checked) {
     }
 }
 
+.projects-nav{
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+
+    li{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        height: 3.5rem;
+        bottom: 0;
+
+        &:hover{
+            p{
+                transform: translateX(-4.5rem);
+                transition: .2s ease;
+            }
+        }
+    }
+
+    label{
+        display: flex;
+        align-items: center;
+    }
+
+    p{
+        font-size: .8rem;
+        top: 0;
+        z-index: -1;
+        transition: .2s ease;
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    label:has(input:checked) img{
+        border: solid 2px red;
+    }
+}
+
 .projects-wrapper{
     width: clamp(1rem, 100%, 80rem);
     justify-self: center;
 }
-
-/******************************************
- *              loonsworld           *
- ******************************************/
 
 .projects-wrapper > article{
     flex-direction: column;
@@ -132,7 +196,34 @@ body:has(#pj5:checked) {
     }
 }
 
+.pokemon-title{
+    padding: 1rem 5rem!important;
+}
+
+.hackaton-title{
+    padding: 1rem 4.5rem!important;
+}
+
+.roger-controls{
+    img{
+        width: 100%;
+    }
+}
+
+.ns .content-container{
+    flex-direction: column!important;
+}
+
+.hackaton .preview div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
 @media (min-width:900px){
+
     .projects-header{
         h1{
             text-align: left;
@@ -144,19 +235,58 @@ body:has(#pj5:checked) {
             object-position: top;
             border-radius: 8px;
         }
-
-        
     }
+
+    .hackaton-img, .ff-img{
+        object-position: center!important;
+    } 
+
+    .pokemon-title{
+        padding: 1rem 1rem!important;
+    }
+
+    .hackaton-title{
+        padding: 1rem 1rem!important;
+    }
+
+
 }
 
 @media (min-width:1200px){
-    .pokemon{
+    .pokemon, .ns, .roger, .ff{
         .preview{
             ul{
                 display: grid!important;
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
+    }
+
+    .roger{
+        .content-container{
+            display: grid!important;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "rgr-feature rgr-achieved" "rgr-feature rgr-controls";
+
+            section:nth-of-type(1){grid-area: rgr-feature;}
+            section::nth-of-type(2){grid-area: rgr-achieved;}
+            section::nth-of-type(3){grid-area: rgr-controls;}
+        }
+    }
+
+    .hackaton .preview ul{
+        display: grid!important;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "hackaton-f1 hackaton-f1 hackaton-f2 hackaton-f2" "hackaton-f3 hackaton-f4 hackaton-f4 hackaton-f5";
+
+        li:nth-child(1){ grid-area: hackaton-f1;}
+        li:nth-child(2){ grid-area: hackaton-f2;}
+        li:nth-child(3){ grid-area: hackaton-f3;}
+        li:nth-child(4){ grid-area: hackaton-f4;}
+        li:nth-child(5){ grid-area: hackaton-f5;}
+
     }
 }
 

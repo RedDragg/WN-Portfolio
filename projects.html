@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/text.css">
-
 </head>
 
 <body>
@@ -58,36 +57,69 @@
         </nav>
     </header>
 
-    <section class="projects-nav">
-        <ul>
-            <li><label for="pj1"><input type="radio" id="pj1" name="pj">Loonsworld</label></li>
-            <li><label for="pj2"><input type="radio" id="pj2" name="pj">WAFS</label></li>
-            <li><label for="pj3"><input type="radio" id="pj3" name="pj">Pokemon</label></li>
-            <li><label for="pj4"><input type="radio" id="pj4" name="pj">Roger</label></li>
-            <li><label for="pj5"><input type="radio" id="pj5" name="pj" checked>NS</label></li>
-            <li><label for="pj6"><input type="radio" id="pj6" name="pj">Woman in Tech</label></li>
-            <li><label for="pj7"><input type="radio" id="pj7" name="pj">Framer Framed</label></li>
-        </ul>
-    </section>
+
 
     <main>
+            <section class="projects-nav">
+        <ul>
+            <li><label for="pj1"><input type="radio" id="pj1" name="pj" hidden><img src="images/projecten/loonsworld/loonsworld.gif"><p>Loonsworld</p></label></li>
+            <li><label for="pj2"><input type="radio" id="pj2" name="pj" hidden><img src=""><p>WAFS</p></label></li>
+            <li><label for="pj3"><input type="radio" id="pj3" name="pj" hidden><img src="images/projecten/pokemon/pokemon-intro.gif"><p>Pokemon</p></label></li>
+            <li><label for="pj4"><input type="radio" id="pj4" name="pj" hidden><img src="images/projecten/roger/roger-index.gif"><p>Roger</p></label></li>
+            <li><label for="pj5"><input type="radio" id="pj5" name="pj" hidden><img src="images/projecten/NS/ns-index.gif"><p>NS</p></label></li>
+            <li><label for="pj6"><input type="radio" id="pj6" name="pj" hidden><img src="images/projecten/hackaton/WotW.gif"><p>Woman of the Web</p></label></li>
+            <li><label for="pj7"><input type="radio" id="pj7" name="pj" hidden><img src="images/projecten/framerframed/ff-index.gif"><p>Framer Framed</p></label></li>
+        </ul>
+    </section>
         <div class="projects-wrapper">
             <section class="projects-header">
-                <img class="projects-img loonsworld-img" src="images/projecten/loonsworld/loonsworld.gif" alt="bloons project">
+                
                 <h1 class="title loonsworld-title">
                 <span>L</span><span>o</span><span>o</span><span>n</span><span>s</span><span>w</span><span>o</span><span>r</span><span>l</span><span>d</span>
                 </h1>
 
 
-                <img class="projects-img pokemon-img" src="images/projecten/pokemon/pokemon-intro.gif" alt="pokemon project">
                 <h1 class="title pokemon-title">
                 <span>P</span><span>o</span><span>k</span><span>e</span><span>m</span><span>o</span><span>n</span>
                 <span> </span>
                 <span>G</span><span>u</span><span>e</span><span>s</span><span>s</span><span>e</span><span>r</span>
                 </h1>
+
+                <h1 class="title roger-title">
+                    <span>R</span><span>o</span><span>g</span><span>e</span><span>r</span>
+                </h1>
+
+                <h1 class="title ns-title">
+                    <span>N</span><span>S</span>
+                </h1>
+
+                <h1 class="title hackaton-title">
+                <span>W</span><span>o</span><span>m</span><span>a</span><span>n</span><span> </span>
+                <span>o</span><span>f</span><span> </span>
+                <span>t</span><span>h</span><span>e</span><span> </span>
+                <span>W</span><span>e</span><span>b</span>
+                </h1>
+
+                <h1 class="title ff-title">
+                <span>F</span><span>r</span><span>a</span><span>m</span><span>e</span><span>r</span>
+                <span> </span>
+                <span>F</span><span>r</span><span>a</span><span>m</span><span>e</span><span>d</span>
+                </h1>
+
+                <img class="projects-img loonsworld-img" src="images/projecten/loonsworld/loonsworld.gif" alt="bloons project">
+                <img class="projects-img pokemon-img" src="images/projecten/pokemon/pokemon-intro.gif" alt="pokemon project">
+                <img class="projects-img roger-img" src="images/projecten/roger/roger-index.gif" alt="roger project">
+                <img class="projects-img ns-img" src="images/projecten/NS/index-ns.png" alt="NS project">
+                <img class="projects-img hackaton-img" src="images/projecten/hackaton/WotW.gif" alt="hackaton project">
+                <img class="projects-img ff-img" src="images/projecten/framerframed/ff-index.gif" alt="Framer framed project">
+
+
+
+
+
             </section>
             <article class="loonsword">
-            <h2>A project made with CSS only. <span>NO Javascript.</span></h2>
+            <h2>A project made with CSS only. <span>NO Javascript.</span> NO Images.</h2>
 
             <section class="intro">
                 <h3>Starting with my journey</h3>
@@ -273,6 +305,12 @@
                             <li>Iteratively improved the application based on Roger’s direct feedback.</li>
                         </ul>
                     </section>
+
+                    <section class="roger-controls">
+                        <h3>Controls</h3>
+                        <p>For optimal use, please familiarize yourself with the available hotkeys.</p>
+                        <img src="images/projecten/roger/controls.png" alt="">
+                    </section>
                 </div>
                 <section class="links">
                         <a class="link-button" href="https://reddragg.github.io/CSSToTheRescue/">Visit website</a>
@@ -282,12 +320,11 @@
                     <section class="preview">
                         <h3>Preview</h3>
                         <ul>
-                            <li><p>PokeGuesser</p><img src="images/projecten/pokemon/pokemon-guess.gif" alt=""></li>
-                            <li><p>Pokedex</p><img src="images/projecten/pokemon/v3-pokedex.gif" alt="loonsworld op en neer buttons"></li>
-                            <li><p>Pokemonlist</p><img src="images/projecten/pokemon/v3-pokemon-guessedall.gif" alt=""></li>
-                            <li><p>Streak count</p><img src="images/projecten/pokemon/v3-pokemon-streak.gif" alt=""></li>
-                            <li><p>Username</p><img src="images/projecten/pokemon/v3-pokemon-username.gif" alt=""></li>
-                            <li><p>Winners screen</p><img src="images/projecten/pokemon/v3-winnercontainer.gif" alt=""></li>
+                            <li><p>Annotation</p><img src="images/projecten/roger/v3-annotation-toevoegen.gif" alt=""></li>
+                            <li><p>Controls</p><img src="images/projecten/roger/v3-controls.gif" alt=""></li>
+                            <li><p>Screenreader</p><img src="images/projecten/roger/v3-screenreader.gif" alt=""></li>
+                            <li><p>Wordselection</p><img src="images/projecten/roger/v3-wordselection.gif" alt=""></li>
+                            <li><p>Wordselection deleted</p><img src="images/projecten/roger/v3-wordselection-deleted.gif" alt=""></li>
                         </ul>
                     </section>
             </article>
@@ -332,12 +369,125 @@
                 <section class="preview">
                     <h3>Preview</h3>
                     <ul>
-                        <li><p>PokeGuesser</p><img src="images/projecten/pokemon/pokemon-guess.gif" alt=""></li>
-                        <li><p>Pokedex</p><img src="images/projecten/pokemon/v3-pokedex.gif" alt="loonsworld op en neer buttons"></li>
-                        <li><p>Pokemonlist</p><img src="images/projecten/pokemon/v3-pokemon-guessedall.gif" alt=""></li>
-                        <li><p>Streak count</p><img src="images/projecten/pokemon/v3-pokemon-streak.gif" alt=""></li>
-                        <li><p>Username</p><img src="images/projecten/pokemon/v3-pokemon-username.gif" alt=""></li>
-                        <li><p>Winners screen</p><img src="images/projecten/pokemon/v3-winnercontainer.gif" alt=""></li>
+                        <li><p>NS index</p><img src="images/projecten/NS/ns-index.gif" alt=""></li>
+                        <li><p>Vraag 1</p><img src="images/projecten/NS/vraag1.gif" alt=""></li>
+                        <li><p>Vraag 2</p><img src="images/projecten/NS/vraag2.gif" alt=""></li>
+                        <li><p>Vraag 3</p><img src="images/projecten/NS/vraag3.gif" alt=""></li>
+                    </ul>
+                </section>
+
+            </article>
+            <article class="hackaton">
+                <h2>A project that celebrates women in tech</h2>
+
+                <section class="hackaton-intro">
+                    <h3>My journey</h3>
+                    <p>This project was a 4-day sprint in which we, as a team, had to build a website to honor women in tech. Our first idea was to create a temple where women would be admired through rituals, but that turned out to be too ambitious given the limited time. So instead, we built a stage where the women are showcased along with information about them.</p>
+                    <p>My role in the team was Front-End Developer. I mainly focused on the layout and creating interactive animations.</p>
+                </section>
+                <div class="content-container">
+                    <section class="hackaton-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Smooth curtain animation using sibling index.</li>
+                            <li>Interactive curtain open/close on hover.</li>
+                            <li>Stage and background screen for displaying info.</li>
+                            <li>Spotlights reposition with anchor positioning.</li>
+                            <li>Clean UI transitions for better focus on content.</li>
+                        </ul>
+                    </section>
+
+                    <section class="hackaton-achieved">
+                        <h3>What have i achieved?</h3>
+                        <ul>
+                            <li>Used sibling index for smooth, wavy curtain animations</li>
+                            <li>Created interactive curtains that open and close on hover</li>
+                            <li>Built a background screen to display women’s information</li>
+                            <li>Implemented spotlights that hide on hover and return with anchor positioning</li>
+                        </ul>
+                    </section>
+
+                    <section class="hackaton-conclusion">
+                        <h3>Conclusion</h3>
+                        <p>This project helped me experiment with creative UI interactions using advanced CSS. The combination of animation timing and layout control resulted in a smooth and engaging experience, all built within a tight sprint.</p>
+                    </section>
+
+                </div>
+
+                <section class="links">
+                    <a class="link-button" href="https://reddragg.github.io/CSSToTheRescue/">Visit website</a>
+                    <a class="link-button" href="https://github.com/RedDragg/CSSToTheRescue.git">Visit Github</a> 
+                </section>
+
+                <section class="preview">
+                    <h3>Preview</h3>
+                    <ul>
+                        <li><p>Gordijnen wavy</p><img src="images/projecten/hackaton/gordijn-v2.gif" alt=""></li>
+                        <li><p>Gordijnen open</p><img src="images/projecten/hackaton/gordijn-v2-open.gif" alt=""></li>
+                        <li><p>WotW</p><img src="images/projecten/hackaton/WotW.gif" alt=""></li>
+                        <li><p>Scherm</p><img src="images/projecten/hackaton/scherm.gif" alt=""></li>
+                        <li><p>Anchors spotlights</p><img src="images/projecten/hackaton/anchors-spotlight.gif" alt=""></li>
+                    </ul>
+                </section>
+            </article>
+
+            <article class="ff">
+                <h2>An dynamic website made with liquid.js and vite</h2>
+                <section class="ff-intro">
+                    <h3>Intro</h3>
+                    <p>This project was a team assignment where we had to create a solution for a client in 6 weeks. My role in the team was front-end developer and my main page is the archive page. I helped with the design and translating those designs into code. I also created many tests to gather feedback, which helped our team improve step by step.</p>
+                    <p>In collaboration with Cas Bool, the creator of Framer Framed, we worked on a better visualizing of the database of Framer Framed and made sure to consider users with cognitive impairments.</p>
+                </section>
+
+                <section class="ff-journey">
+                    <h3>My journey</h3>
+                    <p>During the testing phase, I explored and refined various features to find the best fit for the website. I experimented with archive folders but found they didn’t suit the project’s artistic style. </p>
+                    <p>I attempted a 3D z-axis scroll effect, which was a valuable learning experience despite not working out. </p>
+                    <p>I developed customizable settings including light/dark mode and font sliders, and focused on making the navigation responsive with integrated settings. </p>
+                    <p>For the archive section, I iterated through two versions based on feedback, improving usability and design elements like category switching and footer effects. </p>
+                    <p>Finally, I collaborated with teammates to merge features such as category selection and pagination, and enhanced the user experience with color-coded hovers, legends, and dynamic settings across pages.</p>                        
+                </section>
+                <div class="content-container">
+                    <section class="ff-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Light & Dark mode support in both list and grid views.</li>
+                            <li>Responsive layout for optimal use on all screen sizes.</li>
+                            <li>Category switcher via a <code>&lt;select&gt;</code> dropdown for easier navigation.</li>
+                            <li>Pagination system built with Liquid and JavaScript, including item count control per page.</li>
+                            <li>Category-based hover styling using background opacity and colored borders.</li>
+                            <li>Legend explaining category color codes for clarity.</li>
+                            <li>Global settings component dynamically applied across all pages.</li>
+                        </ul>
+                    </section>
+
+                    <section class="ff-achieved">
+                        <h3>What have i achieved?</h3>
+                        <ul>
+                            <li>Experience collaborating with a real client</li>
+                            <li>Working with HTML tables and their functionality</li>
+                            <li>Using Liquid.js for templating</li>
+                            <li>Data fetching and filtering implementation</li>
+                            <li>Team collaboration and communication</li>
+                            <li>Building pagination and adding dynamic features</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <section class="links">
+                    <a class="link-button" href="https://reddragg.github.io/CSSToTheRescue/">Visit website</a>
+                    <a class="link-button" href="https://github.com/RedDragg/CSSToTheRescue.git">Visit Github</a> 
+                </section>
+
+                <section class="preview">
+                    <h3>Preview</h3>
+                    <ul>
+                        <li><p>Hovers</p><img src="images/projecten/framerframed/category-hovers.gif" alt=""></li>
+                        <li><p>Pagination list</p><img src="images/projecten/framerframed/category-pagiantion-list.gif" alt=""></li>
+                        <li><p>Pagination grid</p><img src="images/projecten/framerframed/category-pagination-grid.gif" alt=""></li>
+                        <li><p>Per page</p><img src="images/projecten/framerframed/category-perpage.gif" alt=""></li>
+                        <li><p>Settings</p><img src="images/projecten/framerframed/category-settings.gif" alt=""></li>
+                        <li><p>Footer</p><img src="images/projecten/framerframed/category-footer.gif" alt=""></li>
                     </ul>
                 </section>
 
@@ -353,6 +503,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/project.js"></script>
 </body>
 
 </html>
