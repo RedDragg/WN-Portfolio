@@ -1,0 +1,814 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+    font-family: "Mulish", serif;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-nav-bg-beforescroll: #fffefe;
+    --color-nav-links-beforescroll: #000;
+
+    --color-nav-bg-afterscroll: #000;
+    --color-nav-links-afterscroll: #fff;
+
+    --color-hamburger-beforescroll: #fff;
+    --color-hamburger-afterscroll: #000;
+
+    --padding-desktop: 10px 5em 10px 5em;
+    --padding-mobiel: 10px 2em 10px 2em;
+
+    --bg-btn: hsl(111, 100%, 54%); /* Light mode kleur */
+    --btn-color: #000;
+    --text-color: #000;
+    --bg-color: #fff;
+ 
+    --color-endcursor-typewriter: #fff;
+  } 
+
+  li:not(:first-child)
+  body:has(#darkmode:checked) {
+    /* Wanneer de label met id darkmode is gechecked dan gaan deze kleuren in, daarom zijn ze dezelfde naam. */
+    --bg-btn: #000; /* Dark mode kleur */
+    --text-color: #fff;
+    --bg-color: #000;
+    --btn-color:#fff;
+  }
+
+  #darkmode {
+    display: none;
+  }
+
+  .nav-links label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--bg-btn);
+    color: var(--btn-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .nav-links label:hover{
+      color: #111;
+      background: #39ff14;
+      box-shadow: 0 0 50px #39ff14;
+  
+  }
+  
+/* navigatie menu styling */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-nav-bg-beforescroll);
+    padding: var(--padding-desktop);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: var(--color-nav-bg-afterscroll);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.logo-container{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--color-nav-links-beforescroll);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-links li a {
+    color: var(--color-nav-links-afterscroll);
+}
+
+.navbar img:first-of-type{
+    border-radius: 20em;
+    width: 50px;
+    height: 50px;
+}
+
+  /* typewriter https://www.youtube.com/watch?v=vsKYZj-XskI*/
+  .typewriter-container{
+    display: inline-block;
+  }
+
+  .typing{
+    animation: typing 4s steps(40,end); /* 40 stappen worden gezet in 4 seconden */
+    overflow: hidden;  /* alles wat buiten de kader valt blijft hidden */
+    white-space: nowrap;/* als de kader te klein wordt, blijven de letters inline, dus ze gaan niet naar de volgende regel */
+    color: black;
+  }
+
+  .typing.scrolled{
+    color: white;
+  }
+
+
+  @keyframes typing{
+    /* de kader width gaat van 0px naar wijdtje van de tekst dus 100%. 
+    Door overflow hidden zie je alleen de letters die in de kader komen. */
+    0% { width: 0;}
+    100%{ width: 100%;}
+  }
+
+/* hamburger menu bar */
+/* https://codepen.io/ainalem/pen/wvKOEMV hamburger animation */
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    display: none;
+  }
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line.scrolled{
+    stroke: white;
+  }
+
+
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+
+  
+
+  section{
+    padding: var(--padding-section);
+  }
+
+  /* hero section styling */
+
+  .hero-section{
+    padding: var(--padding-desktop);
+    background-image: url(../images/elton3.JPG);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 100px);
+    color: var(--bg-color);
+  }
+
+  .hero-section h1{
+    font-size: 6em;
+    max-width: 200px;
+    animation: slide-inH1 2s ease;
+    color: white;
+  }
+
+  .hero-section p{
+    color: white;
+  }
+
+  @keyframes slide-inH1{
+    0%{ transform: translateX(-500px);}
+    100%{transform: translateX(0);}
+  }
+
+  section:first-of-type ul{
+    list-style: none; 
+  }
+
+  section:first-of-type p{
+    font-size: 1.5em;
+    font-weight: bold;
+    animation: slide-inP 2s ease, shake .5s 3s;
+  }
+
+  @keyframes slide-inP{
+    0%{transform: translateX(500px)};
+    100%{transform:translateX(0)};
+  }
+
+  /* BRON shake https://www.w3schools.com/howto/howto_css_shake_image.asp */
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  /* over mij styling */
+  .overMij{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-desktop);
+    text-align: center;
+  }
+
+  .overMij h1{
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .overMij p{
+    max-width: 700px;
+    font-size: 1.1em;
+  }
+
+  /* Fotogallerij styling */
+  /* bron: https://scroll-driven-animations.style/demos/reverse-scroll/css/ */
+  .columns{
+    view-timeline-name: --mySubject; /* Ik wil dat de animatie pas afgaat wanneer de columns in de viewport te zien is. */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: hidden;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5em 0 5em;
+    justify-self: center;
+    max-width: 1050px;
+    
+}
+
+  .column img{
+    border-radius: 1em;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 0.75;
+    object-fit: cover;
+    transition: scale 1s;
+    box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+}
+
+.column img:hover{
+    scale: 1.1;
+    transition: scale 1s;
+}
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+
+}
+.column-reverse{
+    transform: translateY(calc(-100% + 100vh));
+    animation: adjust-position linear forwards;
+    animation-timeline: --mySubject; /* ik maak een variabele aan voor de kolom die ik wil animeren */
+    
+}
+
+
+
+@keyframes adjust-position {
+    from {
+        transform: translateY(-140%);
+
+    }
+    to {
+        transform: translateY(140%);
+
+    }
+}
+
+/* section 3 styling */
+
+  section:not(.overMij, .hero-section) > h1:first-of-type{
+    font-size: 2em;
+    text-align: center;
+    padding: 1em 0 1em 0;
+  }
+		.doelen-img-container{
+			position: relative;
+			width: 600px;
+			height: 150px;
+      
+		}
+
+		.doelen-img-container img:last-of-type{
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			transition: all 1s ease;
+		}
+		
+		.doelen-img-container img:last-of-type:hover{
+			opacity: 1;
+			transition: all 1s ease;
+		}
+
+		.doelen img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+      border-radius: 1em;
+      box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+		}
+
+		.doelen ul{
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			gap: 2em;
+
+		}
+
+		.doelen li{
+			display: flex;
+			flex-direction: row;
+			gap: 2em;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.doelen ul li:nth-of-type(2) .doel-content{
+			order: -1;
+		}
+
+		.doelen ul li:first-of-type{
+			animation: slideInL linear forwards;
+			animation-timeline: view(); /* ga pas af wanneer de list in beeld komt. de hele scrollbar is niet meer van 0-100% maar alleen de stuk waarop de list in beeld is is nu 0-100% */
+		}
+
+    .doel-content{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .doel-content h1{
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+    }
+
+    .doel-content p{
+      margin: 0;
+      padding: 0;
+      max-width: 500px;
+    }
+
+
+		@keyframes slideInL{
+			0%{
+				translate: -800px 0px;
+				opacity: 0;
+			}
+			20%{
+				opacity: 1;
+			}
+			50%{
+				translate: 0;
+			}
+
+			75%{
+				translate: 0;
+				opacity: 1;
+			}
+
+			90%{
+				opacity: 0;
+			}
+		}
+
+		.doelen ul li:nth-of-type(2){
+			animation: slideInR linear forwards;
+			animation-timeline: view();
+		}
+
+		@keyframes slideInR{
+			0%{
+				translate: 800px 0px;
+				opacity: 0;
+			}
+			20%{
+				opacity: 1;
+			}
+		  38%{
+				translate: 0;
+			}
+
+			80%{
+				translate: 0;
+				opacity: 1;
+			}
+
+			100%{
+				opacity: 0;
+			}
+		}
+
+    .doelen ul li:last-of-type{
+      animation: slideInLl linear forwards;
+			animation-timeline: view();
+    }
+
+    @keyframes slideInLl{
+      0%{
+				translate: -800px 0px;
+				opacity: 0;
+			}
+			18%{
+				opacity: 1;
+        translate: 0;
+			}
+			75%{
+				translate: 0;
+				opacity: 1;
+			}
+
+			90%{
+				opacity: 0;
+			}
+    }
+
+    .hobbies {
+      --totale-kaarten: 3;      /* aantal kaarten */
+      --card-height: calc(100% / var(--totale-kaarten)); /* 100% = hoogte van de kaarten + gap / aantal kaarten */
+ 
+     
+      display: flex;
+      flex-direction: column;
+      gap: 1em 0;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+
+      view-timeline-name: --cardsContainer;       /* wanneer de .hobbies in beeld komt tot het uit beeld gaat is dat mijn scroll view van 0-100% */
+
+    }
+
+    .hobbies-titel{
+      margin: 0;
+    }
+
+    .hobby {
+      --target-brightness: 50%;
+      transform-origin: top center;
+      position: sticky;  
+      top: calc(calc(var(--index) * 20px) + 70px);     /* index van de kaarten 1/2/3 * 20px (sticky op 20px van de top) + 70px van de top voor de fixed nav */
+      
+      animation: stacking linear forwards;
+      animation-timeline: --cardsContainer;
+      animation-range-start: exit-crossing
+        calc(var(--card-height) * (var(--index) - 1));
+        /* hoogte van de kaart met de gap * index nummer - 1 dus ik wil de animatie van elk kaart starten op de hoogte van de kaart * de index dus 1,2 of 3. ze beginnen kleiner te worden en krijgen een brightness van 50%%*/
+      animation-range-end: exit-crossing
+        calc(var(--card-height) * var(--index));    /* exit crossing gebruik je wanneer er twee divs overlappen. volgens de video is dit een betere manier dan normaal exit te gebruiken */
+
+    }
+
+    #hobby-1{
+      --index: 1;      /* index zijn de getallen waarmee ik reken in de formules */
+
+    }
+
+    #hobby-2{
+      --index: 2;
+    }
+
+    #hobby-3{
+      --index: 3;
+      --target-brightness: 100%;
+    }
+
+
+    @keyframes stacking {
+      to {
+        transform: scale(calc(1 - 0.1 * (var(--totale-kaarten) - var(--index))));
+        /* hobby-1 = 1 - 0.1 * 3 - 1 = 0.8
+        hobby-2 = 1 - 0.1 * 3 - 2 = 0.9
+        hobby-3 = 1 - 0.1 * 3 - 3 = 1 */
+        filter: brightness(var(--target-brightness));
+      }
+    }
+
+    .hobby-wrapper {
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      overflow: clip;
+      box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+      padding: 0;
+      list-style: none;
+      position: relative;
+      max-height: 300px;
+    }
+
+    .hobby-wrapper::after{
+      content: '';
+      position: absolute;
+      inset: 0;
+      transition: all 10s ease;
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat; 
+      background-size: cover;
+      width: 100%;
+      border-radius: 14px;
+    }
+
+    .hobby-wrapper:hover::after{
+      opacity: 0;
+      transform: translate(-300px, 50px);
+      transition: all .3s ease;
+    }
+
+    .hobbies article:first-of-type .hobby-wrapper::after{
+      background-image: url(../images/doelen/webdev.jpeg);
+    }
+
+    .hobbies article:nth-of-type(2) .hobby-wrapper::after{
+      background-image: url(../images/doelen/css-animation.jpg);
+    }
+
+    .hobbies article:nth-of-type(3) .hobby-wrapper::after{
+      background-image: url(../images/doelen/backenddev.jpg);
+    }
+
+    .hobby-image-container {
+      display: flex;
+      width: 40%;
+      flex-shrink: 0;
+    }
+
+    .hobby-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+
+    .hobby-content-wrapper {
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+
+    .hobby-content-wrapper h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 2em;
+      font-weight: 600;
+      color: #16263a;
+    }
+    .hobby-content-wrapper p {
+      line-height: 1.4;
+      font-size: 1em;
+      color: #16263a;
+    }
+
+section:last-of-type{
+  height: 100vh;
+}
+
+.opdrachten{
+  max-width: 900px;
+  justify-self: center;
+  margin-top: 3em
+}
+
+
+.opdracht ul{
+  list-style: none;
+}
+
+.opdr-1-tekst-1-container img{
+ border-radius: 25em;
+ width: 100px;
+ height: 100px;
+}
+
+.opdr-1-container{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  padding: 2em;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,4,69,1) 54%, rgba(9,9,121,1) 72%, rgba(0,212,255,1) 100%);
+  color: white;
+  border-radius: 1em;
+}
+
+.opdr-1-tekst-1-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+}
+
+.opdr-1-tekst-2-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.opdr-1-tekst-2-tekst-container{
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.opdr-1-tekst-2-tekst-container li{
+  padding: 5px 15px 5px 15px;
+  border: dashed 3px rgb(0, 180, 15);
+  font-weight: bold;
+  text-transform:capitalize;
+
+}
+
+.opdr-1-tekst-2-tekst-container li:hover{
+  box-shadow: 0 0 50px #39ff14;
+  background: #39ff14;
+  color: #000;
+}
+
+
+
+
+
+@media (max-width: 1100px) {
+    .menu {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .nav-links.open {
+        transform: translateY(0);
+        transition: translateY 0.3s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        visibility: visible;
+        opacity: 1;
+        padding-bottom: 1em;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        padding: 1em;
+    }
+
+
+    .nav-links li a {
+        color: #000000;
+    }
+
+    .navbar.scrolled .nav-links li a {
+      color: var(--color-nav-links-beforescroll);
+  }
+
+  .navbar{
+    padding: var(--padding-mobiel);
+  }
+  .hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .hero-section ul{
+    padding: 0;
+    margin: 0;
+  }
+
+  .doelen ul{
+    padding: 2em;
+  }
+}
+
+@media (max-width: 500px){
+  .nav-links li{
+    margin: 0;
+  }
+
+  .hero-section h1{
+    font-size: 3em;
+  }
+
+  .overMij{
+    padding: 1em;
+    text-align: left;
+  }
+
+  .columns{
+    padding-left: 50px;
+  }
+
+  .column img{
+    border-radius: 5px;
+  }
+
+  .column img:hover{
+    scale: 2;
+    transition: scale 1s;
+}
+
+section:not(.overMij, .hero-section) > h1:first-of-type {
+  padding: 1em 0 0 0;
+}
+
+.doelen ul li{
+  flex-direction: column;
+}
+
+.doelen ul li:nth-of-type(2) .doel-content {
+  order: 1;
+}
+
+.hobby-wrapper{
+  flex-direction: column;
+  max-height:fit-content;
+}
+.hobby-image-container img{
+  display: none;
+}
+
+.hobby-content-wrapper h1 {
+  font-size: 1.5em;
+}
+
+}

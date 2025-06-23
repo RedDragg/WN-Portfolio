@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uitklapbare Secties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 50%;
+            max-width: 600px;
+        }
+        details {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+        
+
+        details:nth-of-type(3){
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            gap: 1em;
+            /* selecteer niet de laatste p in de details */
+            p:not(:last-of-type) {
+            color: green;
+            }
+
+            /* selecteer alles behalve de p */
+            :not(p) {
+            text-decoration: underline;
+            }
+
+            /* selecteer alle andere links die niet naar deze https connect */
+            a:not([href*="https://css-tricks.com/almanac/pseudo-selectors/n/not/"]){
+                color: red;
+            }
+
+            /* selecteer alle buttons die niet disabled zijn */
+            button:not([disabled]){
+                font-size: 25px;
+            }
+        }
+
+        details:nth-of-type(4){
+            :is(h1, p, ul, li){
+                color: red;
+                list-style: none;
+                text-decoration: none;
+            }
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <details>
+            <summary>Sectie 1</summary>
+            <p>Inhoud van sectie 1.</p>
+        </details>
+        
+        <details>
+            <summary>Sectie 2</summary>
+            <p>Inhoud van sectie 2.</p>
+        </details>
+        
+        <details>
+            <summary>Demo of :not</summary>
+            <p>Ik ben een groene font </p>
+            <p>Ik word niet geselecteerd</p>
+            <div>I am a div.</div>
+            <div></div>
+
+            <div>            
+                <a href="https://css-tricks.com/almanac/pseudo-selectors/n/not/">css-tricks</a>
+                <a href="https://css-tricks.com/almanac/pseudo-selectors/n/not/">css-tricks</a>
+                <a href="https://www.w3schools.com/cssref/sel_not.php">w3schools</a>
+            </div>
+            <div>
+                <button>button A</button>
+                <button>button B</button>
+                <button disabled>disabled</button>
+            </div>
+            
+        </details>
+        
+        <details>
+            <summary>Sectie 4</summary>
+            <h1>CSS :is</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod neque amet deserunt nisi, tempore cumque enim magnam ipsum provident incidunt sunt laudantium minima veniam. Quibusdam provident blanditiis voluptates nostrum dolore.</p>
+            <ul>
+                <li>
+                    <a href="#">link <span>1</span></a>
+                </li>
+                <li>
+                    <a href="#">link <span>2</span></a>
+                </li>
+                <li>
+                    <a href="#">link <span>3</span></a>
+                </li>
+                <li>
+                    <a href="#">link <span>4</span></a>
+                </li>
+            </ul>
+
+
+        </details>
+        
+    </div>
+</body>
+</html>

@@ -2,15 +2,20 @@
     display: none;
 }
 
-.projects-nav{
-    margin-top: 1rem;
-}
-
 body:has(#pj1:checked){
     .loonsword{
         display: flex;
     }
     .loonsworld-img, .loonsworld-title{
+        display: block;
+    }
+}
+
+body:has(#pj2:checked) {
+    .WAFS{
+        display: flex;
+    }
+    .WAFS-img, .WAFS-title{
         display: block;
     }
 }
@@ -86,7 +91,7 @@ body:has(.projects) main{
     z-index: 99;
 
     &:hover{
-        height: 20rem;
+        height: 25rem;
         transition: .5s ease;
         li{
                 bottom: calc(var(--pj-index) * 3.5rem - 3.5rem);
@@ -307,6 +312,33 @@ body:has(.projects) main{
 
 
 @media (min-width:900px){
+    .projects-nav{
+        width: 8rem!important;
+        bottom: 8rem!important;
+
+        &:hover{
+            height: 35rem!important;
+            li{
+                    bottom: calc(var(--pj-index) * 5rem - 5rem)!important;
+                    transition: .5s ease;
+                }
+
+        } 
+
+        p{
+            font-size: 1rem!important;
+        }
+
+        li{
+
+        &:hover{
+            p{
+                transform: translateX(-8rem)!important;
+                transition: .2s ease;
+            }
+        }
+    }
+    }
 
     .projects-header{
         h1{
@@ -337,7 +369,7 @@ body:has(.projects) main{
 }
 
 @media (min-width:1200px){
-    .pokemon, .ns, .roger, .ff{
+    .pokemon, .ns, .roger, .ff, .WAFS{
         .preview{
             ul{
                 display: grid!important;

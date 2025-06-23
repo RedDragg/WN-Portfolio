@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/liquidjs/dist/liquid.browser.min.js"></script>
+    <title>Elton Portfolio</title>
+</head>
+<body >
+  <!-- template van Dante LiquidJs-->
+  <template id="template" type="text/template">
+    <main id="home">
+      <nav class="navbar" >
+        <div class="logo-container">
+            <img src="images/Eltonicon.png" alt="Elton logo">
+            <div class="typewriter-container">
+                <h1 class="typing">{{data.name}}
+                </h1>
+            </div>
+        </div>
+        <!-- hamburger animation: https://codepen.io/ainalem/pen/wvKOEMV -->
+        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                <svg viewBox="0 0 100 100">
+                  <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+              </button>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+            <li><a href="#fotogalerij">Fotogalerij</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#doelen">Doelen</a></li>
+            <li><a href="#weekly">Weekly update</a></li>
+            <li>  <input type="checkbox" id="darkmode">
+            <label for="darkmode">Wil je het donkerder?</label></li>
+        </ul>
+    </nav>
+  
+    <section class="hero-section">   
+        <h1>Web Developer/ Designer</h1>
+        <ul>
+            <li><p>Communication Multimedia student</p></li>
+            <li><p>Te Hoge school van Amsterdam</p></li>
+        </ul>
+    </section>
+  
+    <section class="overMij">
+      <h1>Hallo, welkom op mijn pagina.</h1>
+      <p>Hier op deze onepager ga je mijn doelen, hobbies en opdrachten vinden van de minor Webdesign&development. Verder vind je ook een fotogalerij waar je een stukje over mezelf ziet.</p>
+  
+      <p> Zelf ben ik een Communication en Multimedia student aan de HvA TTH gebouw. Zelf weet ik nog niet welke kant ik op wil, de design kant of de programmeer kant? allebei vind ik wel leuk en doel erop dat ik een passie hierin kan vinden. Zelf heb ik al wel wat websites gebouwt, maar nog nooit echt uitgebracht. afgeslakte websites dus, maar heel leerzaam geweest.</p>
+        
+      <p id="fotogalerij">Ook speel ik volleybal, ik train 3 dagen in de week waarbij ik 1 wedstrijd wekelijks speel. Samen met mijn team hebben we wel de top 3 gehaald in een pool die best wel hoger is dan ons eigen niveau. Ik ben trots op de team die zo hard zijn gegroeid en ook op mezelf. Volgend seizoen willen wij zeker een klasse hoger spelen en verder vorderen. Een passie voor volleybal heb ik wel zeker!</p>
+  
+      <h2>Fotogalerij</h2>
+    </section>
+    <!-- BRON reverse scroll https://scroll-driven-animations.style/demos/reverse-scroll/css/ -->
+    <section class="columns" >
+        <ul class="column column-reverse">
+            <li><img src="{{customField.ImageUrl[0]}}"  alt="">
+                <p>Suriname 2020</p>
+            </li>
+            <li><img src="{{customField.ImageUrl[1]}}" alt="">
+                <p>Vormgeving 2021</p>
+            </li>
+            <li><img src="{{customField.ImageUrl[2]}}" alt="">
+                <p>Ace Ventura 2022</p>
+            </li>
+            <li><img src="{{customField.ImageUrl[3]}}" alt="">
+                <p>Bella kittycat 2021</p>
+            </li>
+        </ul>
+        <ul class="column">
+          <li><img src="{{customField.ImageUrl[4]}}" alt="">
+              <p>Me as a clown 2023</p>
+          </li>
+          <li><img src="{{customField.ImageUrl[5]}}" alt="">
+              <p>ComicCon 2024</p>
+          </li>
+          <li><img src="{{customField.ImageUrl[6]}}" alt="">
+              <p>Dutch design week 2024</p>
+          </li>
+          <li><img src="{{customField.ImageUrl[7]}}" alt="">
+              <p id="hobbies">Frankrijk 2024</p>
+          </li>
+      </ul>
+      <ul class="column column-reverse">
+        <li><img src="{{customField.ImageUrl[8]}}" alt="">
+            <p>Flowers 2022</p>
+        </li>
+        <li><img src="{{customField.ImageUrl[9]}}" alt="">
+            <p>Volleyball bros 2022</p>
+        </li>
+        <li><img src="{{customField.ImageUrl[10]}}" alt="">
+            <p>Karten 2022</p>
+        </li>
+        <li><img src="{{customField.ImageUrl[11]}}" alt="">
+            <p >Le-ann 2023</p>
+        </li>
+    </ul>
+    
+    </section>
+  
+    <section class="doelen">
+    <h1 class="doelen-titel">Wat zijn mijn hobbies?</h1>
+    <ul>
+      <li>
+        <div class="doelen-img-container">
+          <img src="{{customField.hobbiesImageUrl[0]}}" alt="">
+          <img src="{{customField.hobbiesImageUrl[1]}}" alt="">
+       </div> 
+       <div class="doel-content">
+        <h1>Volleybal</h1>
+        <p>Ik speel nu al 4 jaren volleybal en ben een buiten aanvaller. Als buitenaanvaller ben je verantwoordelijk voor de hoofd aanval en voor de hoofd verdediging. Samen met mijn team willen wij een keer kampioenschap behalen. Ik zie veel vooruitgang binnen de team.</p>
+       </div>
+     </li>
+     <li>
+      <div class="doelen-img-container">
+        <img src="{{customField.hobbiesImageUrl[2]}}" alt="">
+        <img src="{{customField.hobbiesImageUrl[3]}}" alt="">
+     </div> 
+     <div class="doel-content">
+      <h1>League of legends</h1>
+      <p>League of Legends.. Een spel die ik jaren heb kunnen spelen. Naar mijn mening is dit wel een van de beste games ontwikkeld omdat het een goede dopamine kick kan geven. Verslavend en slecht voor het leven, maar wel heel leuk.</p>
+     </div>
+    </li>
+    <li>
+      <div class="doelen-img-container">
+        <img src="{{customField.hobbiesImageUrl[4]}}" alt="">
+        <img src="{{customField.hobbiesImageUrl[5]}}" alt="">
+    </div> 
+    <div class="doel-content">
+      <h1>Spelletjes avond</h1>
+      <p  id="doelen">Samen met mijn vrienden plannen wij elke vrijdag een spelletjes avond. Wij spelen dan de hele avond bordspellen of kaartspelletjes. Een beetje socializen en niet isoleren. Mijn favoriete bordspellen zijn Unstable unicorns, Rummikub en Catan.</p>
+    </div>
+    </li>
+    </ul>
+  </section>
+  <!-- BRON stacking cards https://www.youtube.com/watch?v=Ea86A_2g8pQ&list=PL9PsgOMWUaZ21A3Guxzka44NSEA66FJYn&index=11 -->
+    <section class="hobbies">
+      <h1 class="hobbies-titel">Wat zijn mijn doelen?</h1>
+        <article id="hobby-1" class="hobby">
+          <ul class="hobby-wrapper">
+            <li class="hobby-image-container">
+              <img src="{{customField.doelImageUrl[0]}}" alt="" />
+            </li>
+            <li class="hobby-content-wrapper">
+              <h1>Een passie vinden in Webdesign/development</h1>
+              <p>
+                Graag wil ik een dagelijkse routine creeëren waarin webdevelopment oftewel coderen in mijn routine zit. Coderen vind ik zeker wel leuk maar ik zie er nog geen toekomst in. 
+                </p><p> tijdens deze minor vind ik hierin mijn toekomst en kan ik mijn carriére beginnen als web developer.
+              </p>
+          </li>
+          </ul>
+        </article>
+        <article id="hobby-2" class="hobby">
+          <ul class="hobby-wrapper">
+            <li class="hobby-image-container">
+              <img src="{{customField.doelImageUrl[1]}}" alt="" />
+            </li>
+            <li class="hobby-content-wrapper">
+              <h1>Leren animeren</h1>
+              <p>
+                De toekomst van reclames maken en mensen lokken naar je website zal zeker animaties worden. Een coole animatie kan als kunst gezien worden. 
+                </p><p>Een website ziet er naar mijn mening ook wel professioneler uit met animaties en voor de minder leuke mensen kunnen de animaties altijd uitgezet worden.
+              </p>
+          </li>
+          </ul>
+        </article>
+        <article id="hobby-3" class="hobby">
+          <ul class="hobby-wrapper">
+            <li class="hobby-image-container">
+              <img src="{{customField.doelImageUrl[2]}}" alt="" />
+            </li>
+            <li class="hobby-content-wrapper">
+              <h1>Niet meer bang zijn voor backend</h1>
+              <p>
+                Backend vind ik persoonlijk nogal eng omdat er met veel rekening mee gehouden moet worden. 
+                De taal vind ik nogal verwarrend, misschien omdat ik verkeerde leeraren heb gehad hiervoor. 
+                </p><p id="weekly">Ik heb vertrouwen erin dat samen met Sanne en Vasilis ik dit doel ga behalen.
+              </p>
+          </li>
+          </ul>
+        </article>
+      </section>
+      <section class="opdrachten">
+        <article class="opdracht opdracht-1">
+          <h1>Week 1</h1>
+          <ul class="opdr-1-container">
+            <li class="opdr-1-tekst-1-container">
+              <h1>{{data.name}}</h1>
+              <img src="{{data.avatar}}" alt="{{data.name}}">
+              <p>"{{data.nickname}}"</p>
+              <input type="date" value="{{data.birthdate}}">
+              <p>{{data.bio}}</p>
+            </li>
+            <li class="opdr-1-tekst-2-container">
+              <h2>Een lijst vol met mijn favoriete dingetjes</h2>
+              <ul class="opdr-1-tekst-2-tekst-container">
+                <li>kleur: <input type="color" value="{{data.fav_color}}"></li>
+                <li>property: {{data.fav_property}}</li>
+                <li>tag: {{data.fav_tag}}</li>
+                <li>attribute: {{data.fav_attribute}}</li>
+                <li>feature: {{data.fav_feature}}</li>
+                <li>eten: {{data.fav_kitchen}}</li>
+                <li>boeken genre: {{data.fav_book_genre}}</li>
+                <li>vakantie bestemming: {{data.fav_country}}</li>
+                <li>Wanneer heb ik het meeste energie? {{data.most_energy}}</li>
+                <li>koffie: {{data.fav_coffee}}</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </template>
+
+  <div id="result"><p>loading...</p></div>
+
+  <script src="js/script.js" type="module"></script>
+  <!-- <script src="js/scripts.js"></script> -->
+</body>
+</html>

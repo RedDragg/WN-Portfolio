@@ -2,15 +2,17 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        align-items: center;
 
 
         article:not(.reflectie) {
             display: none;
-            grid-template-columns: .8fr 1fr;
+            flex-direction: column;
             gap: 1rem;
             padding: 1rem;
             transition: .5s;
-
+            width: 100%;
+            
             &:has(.right-summary:hover) {
                 grid-template-columns: .45fr 1fr;
                 transition: .5s;
@@ -242,68 +244,68 @@
 
     &:has(#wn2:checked) {
         .cassie {
-            display: grid;
+            display: flex;
         }
 
     }
 
     &:has(#wn3:checked) {
         .erik {
-            display: grid;
+            display: flex;
         }
     }
 
     &:has(#wn4:checked) {
         .jeremy {
-            display: grid;
+            display: flex;
         }
     }
 
     &:has(#wn5:checked) {
         .julia {
-            display: grid;
+            display: flex;
         }
     }
 
     &:has(#wn6:checked) {
         .kilian {
-            display: grid;
+            display: flex;
         }
     }
 
     &:has(#wn7:checked) {
         .niels {
-            display: grid;
+            display: flex;
         }
     }
 
     &:has(#wn8:checked) {
         .nienke {
-            display: grid;
+            display: flex;
         }
     }
 
     &:has(#wn1:checked) {
         .nils {
-            display: grid;
+            display: flex;
         }
     }
 
     &:has(#wn9:checked) {
         .peter {
-            display: grid;
+            display: flex;
         }
     }
 
     &:has(#wn10:checked) {
         .rosa {
-            display: grid;
+            display: flex;
         }
     }
 
     &:has(#wn11:checked) {
         .roel {
-            display: grid;
+            display: flex;
         }
     }
 
@@ -312,12 +314,13 @@
         flex-direction: row;
         gap: 1rem;
         padding: 1rem;
+        width: clamp(1rem, 100%, 80rem);
     }
 
-    @media (max-width:900px) {
+    @media (max-width:2000px) {
         .wn-nav {
             position: fixed;
-            bottom: 1rem;
+            bottom: 6.5rem;
             right: 3rem;
             z-index: 99;
 
@@ -538,7 +541,7 @@
         }
 
         .wn-nav{
-
+            bottom: 1rem!important;
             ul{
                 &:hover, &:has(label:hover) {
                     li{
