@@ -892,6 +892,11 @@
                 background: rgb(35, 75, 155); 
             }
 
+            tr:not(:first-of-type):hover{
+                background: var(--button-bg);
+                transition: background .3s ease;
+            }
+
 
             /* tr:first-of-type{
                 border-radius: 8px 8px 0 0;
