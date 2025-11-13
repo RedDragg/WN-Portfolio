@@ -585,6 +585,12 @@
             li:nth-child(even) label {
                 background: var(--background-header-text-odd);
             }
+
+            li:hover label {
+                background: var(--button-bg);
+                transition: background .3s ease;
+                
+            }
         }
 
         h1 {
@@ -658,7 +664,10 @@
         .project-text-container{
             display: flex;
             flex-direction: column;
-            gap: 1rem;        }
+            gap: 1rem;
+            max-width: 20rem;
+            margin-right: 1rem;
+        }
 
         img {
             width: 100%;

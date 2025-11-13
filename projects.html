@@ -33,10 +33,10 @@
                 <li class="hamburger-container">
                     <div class="light-dark-container">
                         <label for="light">
-                            <input type="radio" name="theme" id="light" checked hidden>
+                            <input type="radio" name="theme" id="light" hidden>
                         </label>
                         <label for="dark">
-                            <input type="radio" name="theme" id="dark" hidden>
+                            <input type="radio" name="theme" id="dark" checked hidden>
                         </label>
                         <label for="yellowblack">
                             <input type="radio" name="theme" id="yellowblack" hidden>
@@ -56,11 +56,13 @@
     </header>
 
 
+        <label for="allpj"><input type="radio" id="allpj" name="pj" hidden checked><p>All projects</p><p>Go to all projects</p></label></li>
 
     <main>
             <section class="projects-nav">
+
         <ul>
-            <li><label for="pj1"><input type="radio" id="pj1" name="pj" hidden checked><img src="images/projecten/loonsworld/loonsworld.gif"><p>Loonsworld</p></label></li>
+            <li><label for="pj1"><input type="radio" id="pj1" name="pj" hidden><img src="images/projecten/loonsworld/loonsworld.gif"><p>Loonsworld</p></label></li>
             <li><label for="pj2"><input type="radio" id="pj2" name="pj" hidden><img src="images/projecten/WAFS/wafs-index.gif"><p>WAFS</p></label></li>
             <li><label for="pj3"><input type="radio" id="pj3" name="pj" hidden><img src="images/projecten/pokemon/pokemon-intro.gif"><p>Pokemon</p></label></li>
             <li><label for="pj4"><input type="radio" id="pj4" name="pj" hidden><img src="images/projecten/roger/roger-index.gif"><p>Roger</p></label></li>
@@ -71,14 +73,6 @@
     </section>
         <div class="projects-wrapper">
             <section class="projects-header">
-                
-                <img class="projects-img loonsworld-img" src="images/projecten/loonsworld/loonsworld.gif" alt="bloons project">
-                <img class="projects-img WAFS-img" src="images/projecten/WAFS/wafs-index.gif" alt="WAFS project">
-                <img class="projects-img pokemon-img" src="images/projecten/pokemon/pokemon-intro.gif" alt="pokemon project">
-                <img class="projects-img roger-img" src="images/projecten/roger/roger-index.gif" alt="roger project">
-                <img class="projects-img ns-img" src="images/projecten/NS/index-ns.png" alt="NS project">
-                <img class="projects-img hackaton-img" src="images/projecten/hackaton/WotW.gif" alt="hackaton project">
-                <img class="projects-img ff-img" src="images/projecten/framerframed/ff-index.gif" alt="Framer framed project">
                 
                 <h1 class="title loonsworld-title">
                 <span>L</span><span>o</span><span>o</span><span>n</span><span>s</span><span>w</span><span>o</span><span>r</span><span>l</span><span>d</span>
@@ -119,7 +113,13 @@
 
 
 
-
+                <img class="projects-img loonsworld-img" src="images/projecten/loonsworld/loonsworld.gif" alt="bloons project">
+                <img class="projects-img WAFS-img" src="images/projecten/WAFS/wafs-index.gif" alt="WAFS project">
+                <img class="projects-img pokemon-img" src="images/projecten/pokemon/pokemon-intro.gif" alt="pokemon project">
+                <img class="projects-img roger-img" src="images/projecten/roger/roger-index.gif" alt="roger project">
+                <img class="projects-img ns-img" src="images/projecten/NS/index-ns.png" alt="NS project">
+                <img class="projects-img hackaton-img" src="images/projecten/hackaton/WotW.gif" alt="hackaton project">
+                <img class="projects-img ff-img" src="images/projecten/framerframed/ff-index.gif" alt="Framer framed project">
 
 
             </section>
@@ -534,7 +534,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
     <script src="js/project.js"></script>
 </body>
 
